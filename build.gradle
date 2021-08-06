@@ -4,7 +4,7 @@ ext {
     defaultTargetSdkVersion = 31
     defaultMinSdkVersion = 26
     defaultApplicationId = 'com.peshkunti.filmitv'
-    defaultVersionCode = 3
+    defaultVersionCode = 4
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
