@@ -1,4 +1,4 @@
-package com.peshkunti.filmitv.classes
+package com.peshkunti.filmitv.dto
 
 import kotlinx.datetime.Instant
 

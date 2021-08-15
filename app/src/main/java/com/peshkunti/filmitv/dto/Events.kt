@@ -1,15 +1,16 @@
-package com.peshkunti.filmitv.classes
+package com.peshkunti.filmitv.dto
 
-import com.peshkunti.filmitv.classes.Channel.Companion.toChannel
-import com.peshkunti.filmitv.classes.Genre.Companion.toGenre
+import com.peshkunti.filmitv.dao.IEvents
+import com.peshkunti.filmitv.dto.Channel.Companion.toChannel
+import com.peshkunti.filmitv.dto.Genre.Companion.toGenre
 import it.skrape.core.htmlDocument
 import it.skrape.selects.text
 import kotlinx.datetime.*
 import kotlin.time.Duration
 import kotlin.time.ExperimentalTime
 
-class Events {
-    private val events: MutableSet<Event> = mutableSetOf<Event>()
+class Events : IEvents {
+    override val events: MutableSet<Event> = mutableSetOf<Event>()
 
     val groupByTitle: Map<String, List<Movie>>
         get() = events.filterIsInstance<Movie>().groupBy { it.title }
@@ -23,8 +24,6 @@ class Events {
 
     fun filterMoviesByTitles(title: String): List<Movie> =
         events.filterIsInstance<Movie>().filter { it.title == title }
-
-    fun getEvents(): Set<Event> = events
 
     @ExperimentalTime
     fun correctMovies() {

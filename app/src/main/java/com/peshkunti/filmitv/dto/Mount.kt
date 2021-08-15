@@ -1,4 +1,4 @@
-package com.peshkunti.filmitv.classes
+package com.peshkunti.filmitv.dto
 
 enum class Mount(val nameBG: String) {
     JANUARY("януари"),

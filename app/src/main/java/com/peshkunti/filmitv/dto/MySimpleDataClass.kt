@@ -1,4 +1,4 @@
-package com.peshkunti.filmitv.classes
+package com.peshkunti.filmitv.dto
 
 data class MySimpleDataClass(
     val httpStatusCode: Int,

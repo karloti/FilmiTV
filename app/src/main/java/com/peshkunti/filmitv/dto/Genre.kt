@@ -1,4 +1,4 @@
-package com.peshkunti.filmitv.classes
+package com.peshkunti.filmitv.dto
 
 enum class Genre(val names: Set<String>) {
     ACTION(setOf("action", "екшън")),
